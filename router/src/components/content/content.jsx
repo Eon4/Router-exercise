@@ -1,10 +1,10 @@
-// import style from './ContentSection.module.scss'
+import style from './content.module.scss'
 
 export const ContentSection = ({children, title}) => {
 
     return (
         <>
-        <div >
+        <div className={style.contentStyle} >
             <h1>{title}</h1>
             <section>
                 {children}

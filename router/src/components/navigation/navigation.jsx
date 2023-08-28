@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-// import style from './Navigation.module.scss'
+import style from './navigation.module.scss'
 import { Link } from 'react-router-dom';
 
 export const Navigation = () => {
@@ -15,11 +15,11 @@ export const Navigation = () => {
     }, [])
 
     return (
-        <nav >
+        <nav className={style.NaviStyle}>
             <div>
                 <Link to="/">Home</Link>
                 <Link to="/about">About</Link>
-                <Link to="/blog">Blog</Link>
+                <Link to="/employees">Employees</Link>
                 <Link to="/contact">Contact</Link>
             </div>
         </nav>
