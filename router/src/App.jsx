@@ -1,16 +1,21 @@
-import { useState } from 'react'
-import './App.css'
+import { MainLayout } from "./layout/mainLayout";
+import { HomePage } from "./pages/home";
+import { AboutPage } from "./pages/about";
+import { NotFoundPage } from "./pages/notfound";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<MainLayout/>}>
+            <Route index element={<HomePage/>}/>
+            <Route path="/about" element={<AboutPage/>}/>
+            <Route path="*" element={<NotFoundPage/>}/>
+          </Route>
+        </Routes>
+      </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
