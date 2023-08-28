@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 
 export const Navigation = () => {
  
-    // Eksempel der viser Mount / unmount logik
     useEffect(() => {
         console.log("Navigation Component has Mounted")
         return (
